@@ -1,0 +1,143 @@
+library
+
+C# -> greet message-> command prompt
+
+WHO DOES -?
+ENCAPSULATION -> Command/Console/Greeter
+			display/write/Greet
+		message:alphanumeric
+
+Programming Language -> Paradigms { Object Oriented }
+
+Object Orientation
+
+Object -> Entity ->
+	  Data
+	  State & Behavior
+	  Car
+
+Classification (Describe) -> 
+      Candidate -> Real Object / Entity => My Own DataType -> 
+                                                      User/Developer Defined DataType
+								->Compiler
+
+Encapsulation 
+
+Compiler Validate -> Program = Data + Algorithm
+
+Data -> Domain of Value (DataType) -> Acceptable Values + Range + Memory
+
+Built-in DataTypes (int ,float , double, decimal , char , uint , long,short.........mathematics}
+
+W.p to add two numbers (number -> domain of value)
+			addition
+
+W.p to add new Customer -> Bank
+			Customer information { Name,Address, PAN }
+W.p tp add customer -> BigBasket { }
+
+
+W.p to new Button on Login Screen
+
+Real Object ->Occupy Space -> Abstract Entity with Values
+
+Classification -> Encapsualtion of an Object -> Abstarct Entity Without Values
+
+"Encapsulation -> Define Role and Assign Responsibilities"
+
+
+
+
+
+Project
+
+Define u r Role -list Responsibilities
+
+Developer -> coding , design ,review ,unittest, document
+Architech
+Tester
+ScrumMaster
+ProductOwner
+Manager
+HardWareEnginer
+SystemEnginer
+
+Assignment No:1 -Define Role and Responsibilities
+
+Convert patient information from csv format to xml
+Sample Structure of PatientInfo
+MRN,Name,Email,PhoneNumber
+
+Each line of patient item info need to be validated (Ex: MRN,email,phone number)
+if patient info is not valid, patient details must be Logged to  Console window.
+
+
+Read , create , write
+Creat&Write&Validate*Log
+
+Single Responsibilty Principle 
+
+<RoleName> -> List right number of Responsiblities
+Information Holder - Classify Patient Info
+CsvReader -> Read Patient Info from input CSV File
+XMLWriter -> Write Patient Info as a XML Node
+Validator -> Validate Patient Info
+Logger  -> Log Error Based Patient Info
+Controller -> Provide Co-Ordination or Flow Controller
+
+Encapsulation voilate SRP => GOD Class
+
+
+Types -> class 
+
+structure 
+
+
+******.cs
+
+namespace <NameSpaceName>
+{
+
+	class <ClassName>{  }
+	struct <StructName>{  }
+	enum <EnumName> { }
+	interface <InterfaceName> { }
+}
+
+Naming convention : 
+	
+			camel : helloWorld
+			pascal : HelloWorld (UDT Names , Method Names , Namespace Names )
+			NamedConstants : HELLOWORLD
+			keywords :helloworld
+
+What is Namespace ? 
+
+IDE -> FILE Menu --> New Project -> Select Visual C#
+
+ClassLibrary (.net Standard)
+ClassLibrary (.Net Framework)
+ClassLibrary (.Net Core)
+
+
+
+Solution -> N Number Of Projects
+
+Folder -> Sub Folder
+
+.sln -> .csproj(Build Information)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
