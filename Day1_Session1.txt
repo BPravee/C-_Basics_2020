@@ -1,0 +1,153 @@
+C# code (Builiding Blocks)
+C# For Test Automation Engineers ++++++
+Devops
+
+2013/2015/2017/19
+
+
+Progarm = Data + Algorithm (Logic)---------->Target Platform (O.S Services + Hardware)
+
+NATIVE Program			compiler - Windows ,
+					   Linux
+					   Unix
+					   MAC
+
+C,C++ (Platform Specific)
+
+Windows (2k.......Vista.....2007 ....2010....)
+
+Program--> API(Shell)(thread,memory,socket
+
+Program------->VM(platform)---->API(Shell)--->OS Services
+
+Program----->Generate---->Program---->VM---->Api---->OS Services
+
+C#-----C# Compiler----->Generate----->MSIL----Executed--->CLR--communicate-->API--access-->OS Services
+
+
+.Net FX - free 
+C:\Windows\Microsoft.NET\Framework
+
+C# Compiler
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe
+
+
+CSC.exe test.cs
+
+"Program Execution in Windows OS"
+
+"Program + Identity info"    "OS Loader"
+
+
+Person +  philips ID card    "PIC Security"
+
+
+"Aggreed Format of traget Windows O.S"
+
+"PE File Format"
+
+"Portable Executable File Format"
+					.exe
+					.dll
+				
+
+.Net Fx -> Mono
+
+Novel Mono .net
+
+.Net Core
+
+C# Compiler/VS Build  -> .cs---> PE File (Executable Image)
+					 (Library Image) 
+
+.exe / .dll -> PE Files
+	    -> Software Components (Reuse - Version)
+			seperation of Functionality
+		service packs
+
+.exe --> run ----> Resources
+			Memory
+			CPU Cycle
+			Threads---> Process Block
+
+Process - > Security Boundry B/w Instances of Execution 
+
+.exe---> Run---> Instance Of Execution -->Protected ---> Process Block 
+(OutProcess Component)
+
+.dll -> INProcess Component (dll code base loaded -> callers address space)
+
+MSWord Application  (MultiComponents) 
+1.Word Processor - .exe (MSWord.exe)
+2.print .dll
+3.spell Check.dll
+4.Persistance.dll
+6.Convert.dll
+7.Mail.dll
+8.Publish 
+9.grammer - 
+
+
+Applicaation Deployment Architecture
+
+1-tier Architecture (Single process) Notepad.exe , VSIDE
+
+2-tier (2 Processes
+3-tier (3 Processes)
+n-tier
+
+Application
+		.exe + .dll, .dll, .dll
+
+		1-tier (Process block)
+
+Application 
+		client.exe (.dll's) , Server.exe  (.dll's)
+		Process			Process
+
+		(2-tier)
+		Outlook.exe		SMTP Server.exe
+					POP3 Server
+
+		MSWORD.exe		PrintServer.exe
+
+
+
+
+MSTest.exe
+NUnit.exe
+Junit.exe
+
+TestCode 
+	.dll
+
+
+CSC.exe /target:exe test.cs  ->  test.exe
+CSC.exe /target:lib test.cs  ->  test.dll
+
+Visual Studion
+
+exe -> ConsoleApplication Project Template
+dll  -> ClassLibrary Project Template
+
+
+Fundamentals of OS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
