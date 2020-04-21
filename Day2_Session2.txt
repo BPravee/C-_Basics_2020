@@ -1,0 +1,101 @@
+.dll -> reuse ->OutProcess Component (.exe)
+
+App.exe  --Reuse(Reference)-->ConsoleGreeterLib.dll
+
+	OutProcessComponent (.exe)    "Assembly-Binding"    InProcessComponent (.dll)
+
+	InProcessComponent (.dll)		     InProcessComponent (.dll)
+
+
+
+	OutProcessComponent(.exe)	IPC/RPC      OutProcessComponent (.exe)
+
+
+Configuration Files available only for Executable Components - (App.config)
+
+
+A.exe - App.config -> A.exe.config
+B.exe - App.config -> B.exe.config
+C.exe - App.config -> C.exe.config
+
+Deploy(Folder)
+	A.exe + A.exe.config
+	B.exe
+	C.exe
+
+
+Assembly Binding Options
+
+	1.Early Binding (Static Binding)
+	2.Late Binding  (Dynamic Binding)
+
+Early Binding
+	RefererAssembly				
+		Compiler would like to know Metadata of ReferencedAssembly
+	TypeSafe ensured by compiler
+
+
+
+Program - Object Oriented Program
+
+Execution -> Procedure By Procedure
+
+"Program Execution" -> Thread-> "Encapsulate executable instruction in the form of method"
+				"Define Task for thread"
+				"task->method"
+				"entrypoint for execution"
+			Thread -> Once thread finishes its execution path , it must return to its 
+				  origin
+				main()->a()->b()->c()
+			Thread -> to remember execution path - uses GPS (stack data Structure)
+
+static int x=10 (context - data)
+
+(context- method)
+static void Method(){
+
+}
+
+
+Fusion  : How to resolve referenced Assembly
+
+			Depends : is referenced assembly is a strong name Assembly ?
+					No :- Search Path
+						 App Directory
+						    SubDirectory (Name = ReferencedAssembly Name)
+						Private Assembly depolyment
+						example : 
+						 AppDeploy
+							App.exe
+							ConsoleGreeterLib.dll (private Assembly)
+
+Assigment 2:
+
+Build Calculator.dll (add,sub,mul,div)
+Build Excel.exe , Tally.exe 
+EarlyBinding
+Deploy Excel and Tally Application (diffrent folders)
+	
+	ExcelApp		TallyApp
+	  Excel.exe			Tally.exe
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
