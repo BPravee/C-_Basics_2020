@@ -1,0 +1,93 @@
+class Test
+{
+	//Lexical Scope
+        //Members - interdependency - high
+
+}
+
+Coupling - Low 
+
+class NewTest{
+
+	//Lexical Scope
+	
+}
+Cohesion Low - voilates SRP
+"Define Role and Assign Responsibilities" - Encapsulation
+
+
+Build --Project-> Component(PE File)
+
+.Net Application 
+ConsoleGreeterLib.dll (Assembly)
+
+New Project
+	Name:- PE File Name
+	       AssemblyName
+	       DefaultNameSpaceName
+		
+
+C#(DataTypes)---->Compiler---->MSIL (DataTypes)-------------------------->execution
+class					Common Type System
+struct
+enum
+				ValueType		ReferenceType
+
+NameSpace -------Not supported in MSIL
+
+Object:space (memory)
+
+Type Instantiation - new object creation
+
+Different Memory Blocks - Heap,Stack,Static Block
+
+					MSIL (TYPE System)
+
+			VT					RT
+
+Memory			stack/Heap/Static			Heap
+Inheritance 		N.S (sealed)				Inheritance Supported
+Parameter Passing 	Pass By Value				Pass By Address
+Assignment		Copy-Value				Copy- Address
+Default Value		Based on DataType			null
+			int x=default(int)
+
+null Value  Support 	Not Supported				default Value
+			nullable Value Type
+			int? x=null;
+C# Keywords		struct/enum				class
+
+
+"Boxing and UnBoxing" (Expensive)
+
+Box= VaueType----->Reference Type
+UnBox = ReferenceType---->ValueType
+
+//valueType
+int x=10;// 4 bytes
+
+//ReferenceType
+Object obj=x; // 8 Bytes
+
+//unboxing
+x=obj;//Complier Error
+
+//Explicit Cast
+
+x=(int)obj; // Might Cause Exception - Unboxing is not TypeSafe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
