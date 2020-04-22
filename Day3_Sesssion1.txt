@@ -1,0 +1,84 @@
+Private Assembly Deployment 
+
+	Test.dll - upgrade (service pack)
+
+
+A.exe..............................N.exe
+
+A B C D E F G H I J K L M N
+
+1. Redundency - multiple cpoy of same library
+2. Upgrade Issues
+3. Side By Side Installation Issues
+
+CalculatorLib
+     bin
+       debug
+         1.0.0.0
+              CalculatorLib.dll
+         1.0.0.1
+	      CalculatorLib.dll
+
+
+TallyApp
+   Tally.exe
+  CalculatorLib.dll (1.0.0.0)
+
+ExcelApp
+   Excel.exe
+   CalculatorLib.dll (1.0.0.1)
+
+Calculations
+   Tally.exe
+   Excel.exe
+   CalculatorLib.dll (1.0.0.0) / CalculatorLib.dll (1.0.0.1) -> DLL Hell / Versioning Conflict
+
+"Side By side Install"  - Private Probing Path
+
+
+
+1.How to share single copy of libaray for all the applications
+2.Single Location Upgrade
+3.Auto Side By Side Installation support
+
+
+Public Assembly Deployment - Global Assembly Deployment
+
+   Deploy Assemby - Global Assembly Cache (Location)
+				"C:\Windows\Microsoft.NET\assembly"
+
+    Tool to install Assembly to GAC  - gacutil.exe
+
+	gcautil -i  <AssemblyFile>.dll
+
+ GAC Membership Condition - Assembly Must have Strong Name
+
+
+How to build StrongName for Assembly : Digitally Sign The Assembly
+
+Digital Signature
+
+
+Key Pair 
+		Public Key and Private Key
+
+		1. Hash (Assembly Contents) ->yields  Digest
+		2. Encrypt (Digest) Using Private Key -> yields Digital Signature
+		3. Save Public Key as a part of Assembly Information 
+
+Signed Assembly
+		Assembly Contents + Signature + Public Key
+
+How to Generate Test Public Key and Private Key ?
+
+   Use tool -> "sn.exe" 
+
+
+
+
+
+
+
+
+
+

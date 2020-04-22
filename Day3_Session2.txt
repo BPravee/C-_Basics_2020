@@ -1,0 +1,140 @@
+Strong Name
+Name : String
+Version : Major.Minor.Build.Revision
+Culture : Neutral (OS Culture)
+PublicKey : 128 Bytes Data + 32 Bytes Of Header
+
+
+Why GAC Demands Strong Name For Assembly ?
+
+	"Ensure Auto Side By Side Installatio" 
+
+
+Test.dll
+Name:Test
+Version :1.0.0.0
+Culture:Neutral
+PublicKey : 160 Bytes of Data
+
+gacutil -i Test.dll
+   C:\windows\Microsoft.net\Assembly
+   			GAC_MSIL
+		          AssemblyName(Test)
+			     Version_publicKeyToken (1.0.0.0_ Reduce PublicKey Value to Token(8 Bytes)
+				Test.dll
+
+Test.dll
+Name:Test
+Version :1.0.0.1
+Culture:Neutral
+PublicKey : 160 Bytes of Data
+
+gacutil -i Test.dll
+			GAC_MSIL
+				Test
+				   1.0.0.0_12345678
+						Test.dll
+				   1.0.0.1_12345678
+						Test.dll
+
+
+ABC.dll (X)------------------------> a...............z (Y)
+					GAC 
+					  ABC
+					    1.0.0.0_1234556
+						ABC.dll
+   
+
+
+ABC.dll (P)------------------------>aa.exe
+					
+
+Access Modifiers / Visibility Setters
+
+private = Local to Type Scope
+
+internal = Local to Assembly
+
+protected = Family
+
+protected internal = Family or Assembly
+
+public = Unrestricted
+
+
+Function Overloading
+
+class A{
+	public A(){
+		Console.WriteLine("A");
+	}
+
+        public A(int x,int y):this(){
+				Console.WriteLine("A2");
+	}
+
+	public A (int x,int y,int z):this(x,y){
+				Console.WriteLine("A3");
+	}
+
+
+}
+
+	A obj=new A(); "A"
+	A obj=new A(10,20); "A", "A2" 
+	A obj3=new A(10,20,30);"A","A2","A3"
+
+"Static Constructors"
+1.Can Access Static Data members only
+2.static Constructor Visibility - private(default)
+3.static constructor invoked implicitly
+4.static constructor cannot be overloaded
+5.Static Constructor invoked one and only once per class
+6.Static Constructor executed ahead of all other non static conctructors
+
+	public class Test{
+		
+			static  Test(){
+				
+			}
+
+	}
+
+When Does Static Constructor called = When TypeLoad triggers
+
+TypeLoad = "first ever interaction  b/w thread and class"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
