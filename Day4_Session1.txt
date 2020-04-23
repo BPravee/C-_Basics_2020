@@ -1,0 +1,92 @@
+Arrays -
+
+1.Array - An object of Class - System.Array 
+2.Array items stored - Heap
+3.Syntax
+
+	One-D Array
+<dataTypeOfEachItem>[]  <ArrayObjectReference>=new <dataTypeOfEachItem>[size];
+
+  int[] numbers=new int[10];
+  numbers[0]=10;
+  numbers[1]=20;
+  numbers.Reverse();
+
+
+ Matrix (2*3)
+
+ <dataTypeOfEachItem>[,] <matricRef>=new <dataTypeOFEachItem[RowSize,ColumnSize];
+
+  int[,] matrixRef=new int[2,3];
+  matrixRef[0,0]=100;
+
+ Jagged Array
+
+	<dataTypeOfEachItem>[][] <jaggedArrayRef>=new <dataTypeOfEachItem>[3][];
+
+
+DynamicArray 
+		Buffer - 10
+		NewBuffer <-Buffer
+	
+Debugging
+	Set Breakboint -> Method
+	F5 - Start Debugging
+	F11 - Step-in-to
+
+
+objectRef[] -> Class Supports Indexer
+
+constants
+	const <dataType> <MemberName> =<Compile Time Defined Value>; //stored in metadata
+
+	const int  MAXAGELIMIT=60;
+
+
+	public class Employee{
+
+		const int MAXAGELIMIT=60; //private static literal int MAXAGELIMIT=6-
+
+	}
+
+	
+	readonly
+		readonly <datatype> <MemberName>;
+	
+
+	  class Account{
+
+		public readonly int _minBalance;
+
+		public Account(int minBalance){
+			
+			this._minBalance=minBalance;
+		}
+
+       	}
+
+	Account obj=new Account(1000);
+	obj.minBalance=2000; //Compiler Error
+		
+
+	static readonly
+
+		static readonly int member;
+
+			"Initialized using static constructor"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
