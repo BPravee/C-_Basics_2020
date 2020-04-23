@@ -1,0 +1,127 @@
+DataTypes in .net Derived From Object
+
+int x=10;//water
+decimal y=10.45;
+string s="BAC";
+
+object obj=x; boxing
+
+x=obj;//Not Allowed - DownCast - unboxing requires explicit cast
+
+
+Array - Fixed Size
+DynamicArray - Size is Elastic Nature - Collections (List,Queue,Stack,Dictionary,HashTable,LinkedList)
+					Buffer of type Object - Boxing/UnBoxing as well as not 								TypeSafe (demands Explict Cast)
+
+"Parametric Polymorphism" = Generics in .Net
+
+"Parameterize Value of DataType"
+"DataType Value Place Holder" = DataTypeParameter
+
+void  Swap<T>(T x,T y){		swap<int>(10,20);swap<string>("30","40")
+
+	T temp=x;
+	x=y;
+	y=temp;
+}
+
+S Concat<S>(S x,S y){		Concat<int>(10,20); Concat<string>("hello","world");
+
+	return x+y;
+}
+
+
+Type
+
+	class Test{				class Test<T>
+		int x;				{	
+							T x;
+		
+	}					}
+
+
+Test obj=new Test();				Test<string> _obj=new Test<string>();
+						Test<int> _obj2=new Test<int>();
+
+System.Collections (Depends on object (boxing,unboxing and explict cast)
+System.Collections.Generic (Supports Parameteric Polymorphism)
+
+OOPS - Encapsulation - > SRP  -> GOD Class -> Multiple SRP based Classes
+		"Reusability" -> Demands -> Have Relationship - "Expectation and Committement"
+
+Godc-Role --------> Multiple Roles
+
+
+Reusability
+		Code(Class) Reuse			Object Reuse
+
+RelationShip	Inheritance				Uses RealtionShip
+         	is-a					    Has-a RelationShip
+								  Associate ---- Association
+									Contains -> Composition
+									Holds ------->Aggregation
+
+
+Inheritance :-  Static Relationship 
+		Compile time relationship
+		Complete Code Reuse
+		"Commanality and Variation"
+		"Generalization" and "Specialization"
+		Control ------>Window, Button , TextBox , ComboBox
+		Exception -----> NullReferenceException,FileNotFoundException...
+		Stream ----> BinaryStearm,MemoryStream,TextStream
+		OneWay Reusabiity -> Substitution
+		
+
+class Control{
+	double height,width;
+	string author;
+}
+class Window:Control{
+
+
+}
+
+class Button:Control{
+
+
+}
+		
+Control obj=new Window(); //Substitution
+//Check
+if(obj is Window){
+	//Cast
+	Window winObj=(Window)obj;//Safe DownCast 
+
+}
+
+//Check and Cast 
+//if cast is valid as operator return address
+//if Cast is inValid as operator return null
+
+Window winObj=obj as Window;
+if(windObj!=null)
+{
+	//use winObj
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
