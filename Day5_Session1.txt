@@ -1,0 +1,222 @@
+Code Reuse
+
+Override and OverHide(Shadow)
+
+
+Inheritance for Code Versioning
+
+Every Datatype -> ToString(),GetHashCode()
+
+Derived From System.Object
+
+
+class A{
+
+	public void Fun(){}
+
+}
+
+class B:A{
+
+	public void Foo(){}
+
+}
+
+class C:A{
+
+	public void Test(){}
+	//Shadow
+	public new void Fun(){ //New Implementation // base.Fun();}
+
+}
+
+
+B obj=new B();			C obj=new C();
+ obj.Fun();			obj.Fun();//Change Implementation / Versioning
+ obj.Foo();			obj.Test();
+	
+
+
+abstract class Vehicle{
+
+	public void Start(){
+		//Key Based Start
+	}
+	//Family Contract
+	public abstract void Drive();
+
+
+}
+
+
+class Car:Vehicle{
+
+	public new void Start(){
+		//Push Button Start
+	}
+
+	public override void Drive(){
+		//FWD
+	}
+}
+
+
+class Truck:Vehicle{
+
+	public override void Drive(){
+			//RWD
+	}	
+	
+}
+
+Inheritance = "Generalization" and "Specialization" (object)
+
+		"Vehicle"	and "Car"
+				    "Truck"
+			            "Bus"
+
+
+		"Person"    "Reuse"      "Employee"
+				         "Security"
+  				      "Facility"
+				  "Visitor"
+				  "Vendor"
+
+"How to Restrict Instantiation of Class, Support for Code Reuse" = abstract class
+
+abstract class Person{
+
+	
+	//Code Reuse
+}
+
+class Employee:Person{
+
+}
+
+Person obj=new Person();
+
+//Control Family
+public abstract class Control{
+
+		//Code Reuse
+		public double Hiegth;
+		public double GetHeight(){}
+		public abstract void Draw();
+		
+}
+public class TextBox:Control{
+
+	public override void Draw() { //Implementation }
+}
+public class Button:Control{}
+public class Window:Control{}
+
+
+Reusability -> Code Reuse / Object Reuse (Has-a)-uses
+
+class A{
+
+	B obj=new B();
+	public void Foo(){
+		obj.Fun();
+	}
+}
+
+
+class B{
+
+	public void Fun(){}
+}
+
+A obj=new A();
+obj.Foo();
+
+Has-a Relationship -> "Dependency Inversion Principle"
+			"High Level Module Should not depend on Low Level module ....depend on "Abstraction"
+			"Loosly Coupled"
+
+
+public class PatientDataValidator{
+
+
+}
+
+Has-a = "Allows us to Substitute"
+
+	Person uses Communication Medium  For Communication
+							     Email
+		     					     Post
+						             Phone
+
+	Person knows how to use Phone - Andriod phones 
+							Samsung
+							Nokia
+							MI
+
+	Profession know how to use Querty Layout Keyboard ------->Laptop
+		    
+
+
+
+Steps for Abstraction or DIP
+
+1.Choose Low Level Module and Extract interface from Low level module
+2.Interface Name - begin with "I Verb/Capability/What service offered by Low Level Module"
+3.Include High Level Module Expected Behaiors(Methods) from the low level module in the interface
+4.High Level Modue Should Depend On Interface of Low Level Module 
+5.use Interface reference to hold address of Low Level Module Object
+
+
+
+
+Person--------implements-----------IFRIEND {Friendly,Care,angry}
+			           IProfessional {Professional}
+			           ICivicBody {Pollite}
+			           IFamilyPerson { F,C,An,P}
+				   IPassenger {P}
+				   ICustomer {P,Po}
+				-----------------Friend Circle, Office , Society , Family , Bank, Travel
+	Friendly
+	Professional
+	Care
+	Pollite
+	Angry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
