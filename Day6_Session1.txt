@@ -1,0 +1,179 @@
+Custom Attributes - Aspect Oriented Programming
+
+
+C# Code -->compile---> Assembly - Module -> Metadata
+
+"Custom Information (object) -> Metadata
+
+"Define Target for Custom Information "
+
+Target -> Class,Struct,Interface,Method,Field,Property,Event,namespace,indexer,delegate,namespace
+
+
+Custom Attribute -> Class Derived From System.Attribute
+
+How to Use Attribute ->
+			[AttributeName]
+			Target
+
+Encapsulation Attribute 
+			Class Encapsulation
+
+1.Create Attribute - Define Class (Class name end with "Attribute")
+2.Define Target For Attribute - Built in Attribute - [AttributeUsage]
+3.Use Attrribute (Annotate Target [] )
+4.Attribute information Serialized and saved in metadata 
+
+
+How to read Custom Attribute info from metadata 
+	"use Reflection"
+		1.Select Target
+		2.Get Custom Attribute Info
+
+
+
+Unit Test Framework
+
+Nunit test lib
+Nunit Test runner
+
+PicUnit Fx
+Attributes
+Assert methods
+
+PinUnit Test Runner
+
+(Accident)
+Exception  -> Object - Describes "What went wrong in program execution"
+
+{Hospital}
+Handling -> Set reference to an exception Object
+
+GOD(OS) - "Death"
+
+
+"System.Exception"
+
+
+method(){
+		try{
+			//Program Excecution 
+			//Accident Zone
+		}
+		catch(set rereference // Hospital)
+		{
+
+		}
+		
+}
+
+"try,catch,finally,throw"
+
+
+
+try{         
+}
+catch{
+}
+catch{}
+finally{
+}
+
+
+
+try{
+
+}
+finally{
+
+}
+
+try{
+
+	try{
+
+	   }
+	catch{
+		
+             }
+}
+catch{
+
+}
+finally{
+}
+
+
+keywords
+
+ref - Call By Reference
+out
+params
+var
+
+Grammer
+String interpollation
+Lamda
+Object Initializer
+Anonymous Types
+Extension Methods
+
+
+
+
+
+
+Lamda - Grammer -> Create Instance of Delegate
+
+
+delegate void TestDelegate();
+
+
+class A{
+
+	public static void Method(){
+		//Method Body
+	}
+}
+
+
+main(){
+
+	TestDelegate obj=new TestDelegate(A.Method);
+	TestDelegate newObj= ()=>{ //Generated Method Body };
+}
+
+
+Own GitRepository
+Venu.shastri@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
